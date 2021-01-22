@@ -1,0 +1,39 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="grid-item" id="align">
+        <nav class="item">
+          <a routerLink="/landing" routerLinkActive="active">Home </a>
+          <a  routerLink="/resume" routerLinkActive="active">Resume </a>
+          <a  routerLink="/project" routerLinkActive="active">Project </a>
+        </nav>
+      </div> 
+      <div class="grid-item">
+          <nav class="item_middle">
+            <a  routerLink="/form" routerLinkActive="active">Form</a>
+          </nav>
+      </div>
+      <div class="grid-item">
+              <img  class="hovr"  src="{{profile_pic}}" alt="">
+              <h3>Pratiksha Pakannavar</h3> 
+      </div>
+      
+    </div>
+
+    
+     
+      
+
+<div class="grid-footer">
+  <p class="b">Copyright © 2020 Pratiksha_website. All Rights Reserved.</p>
+<a class="b1" href="https://www.linkedin.com/in/pratiksha-pakannavar-a8a35078" target="_blank" ><img src="{{logo}}"></a>
+</div>
+  
+
+</body>
+
+
+<router-outlet></router-outlet>

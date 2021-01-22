@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+  margin: 0px 0px 0px 0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.box:hover {
+    background: -webkit-linear-gradient(#00004d,#8080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
