@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-import {FormBuilder} from '@angular/forms'
+
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,22 @@ import {FormBuilder} from '@angular/forms'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'task1';
+  
   profile_pic:string="assets/images/P.jpg";
   logo:string="assets/images/download.png";
-  
-  
-  
-  constructor() {
-    
+  title = 'Angular8Firebase';
+  description = 'Angular-Fire-Demo';
+ 
+  itemValue = '';
+  items: Observable<any[]>;
+ 
+  constructor(public db: AngularFireDatabase) {
+    this.items = db.list('items').valueChanges();
   }
  
- 
+  onSubmit() {
+    this.db.list('items').push({ content: this.itemValue});
+    this.itemValue = '';
+  }
   
 }
